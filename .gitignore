@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude settings
+.claude/
+
+# Intermediate results (keep folder structure)
+intermediate_results/**/*
+!intermediate_results/**/.gitkeep
+
+# Features (keep folder structure)
+features/**/*
+!features/**/.gitkeep
+
+# Origin data (keep folder structure)
+origin_data/**/*
+!origin_data/**/.gitkeep
+
+# Raw data (keep folder structure)
+data/**
+!data/**/
+!data/**/.gitkeep
+
+# Geospatial data (large files)
+*.tif
+*.tiff
+*.tfw
+*.aux.xml
+*.ovr
+*.vat.cpg
+*.vat.dbf
+*.vrt
+*.shp
+*.shx
+*.dbf
+*.sbn
+*.sbx
+*.prj
+*.cpg
+*.shp.xml
+*.gdb/
+
+# Compressed archives (large files)
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+venv/
+env/
+.conda/
+
+*.docx
+*.pdf
+*.jpgm

@@ -1,0 +1,37 @@
+#用于统一编写参数信息
+exp_name: exp_01_unet       # 输出实验名
+seed: 42                    # 随机种子
+
+#数据信息
+data:
+  root: data/raw
+  sample_dir: data/sample
+  train_dir: data/raw/train
+  val_dir: data/raw/val
+  test_dir: data/raw/test
+  in_channels: 14
+  image_size: 128
+  # 逐通道标准化参数
+  mean: [-0.4914, -0.3074, -0.1277, -0.0625, 0.0439, 0.0803, 0.0644, 0.0802, 0.3000, 0.4082, 0.0823, 0.0516, 0.3338, 0.7819]
+  std: [0.9325, 0.8775, 0.8860, 0.8869, 0.8857, 0.8418, 0.8354, 0.8491, 0.9061, 1.6072, 0.8848, 0.9232, 0.9018, 1.2913]
+
+#模型信息
+model:
+  name: unet
+  out_channels: 2
+
+#训练参数
+train:
+  batch_size: 8
+  epochs: 30
+  lr: 0.001
+  weight_decay: 0.0005
+  optimizer: adam
+  loss: cross_entropy
+  num_workers: 0
+  patience: 8
+
+#模型评估
+eval:
+  threshold: 0.5
+  metrics: [iou, f1, precision, recall]
